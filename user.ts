@@ -1,18 +1,93 @@
-type User = {
-    name: string;
-    age: number;
-};
 
-function isAdult(user: User): boolean {
-    return user.age >= 18;
+export class User {
+    name: string;
+
+    constructor(name:string) {
+        this.name = name
+    }
 }
 
-const justine: User = {
-    name: 'Justine',
-    age: 23,
-};
+export function userFromJson(jsonStr:string):User {
+    try {
+        let usr = JSON.parse(jsonStr)
+        console.log("Created new User : " + usr.name)
+        return new User(usr.name)
+    }
+    catch (e) {
+        console.log("COULD NOT CREATE USER FROM INPUT")
+    }
+}
+
+class Plan {
+        name: string;
+        space: number;
+        private_repos: number;
+        collaborators: number;
+
+    constructor(name: string,
+                space: number,
+                private_repos: number,
+                collaborators: number) {
+
+        this.name = name
+        this.space = space
+        this.private_repos = private_repos
+        this.collaborators = collaborators
+    }
+}
+
+export class GithubUserInfo {
+    login: string;
+    id?: number;
+    node_id?: string;
+    avatar_url: string;
+    gravatar_id?: string;
+    url?: string;
+    html_url?: string;
+    followers_url: string;
+    following_url: string;
+    gists_url?: string;
+    starred_url?: string;
+    subscriptions_url?: string;
+    organizations_url?: string;
+    repos_url: string;
+    events_url: string;
+    received_events_url?: string;
+    type: string;
+    site_admin?: boolean;
+    name: string;
+    company: string
+    blog: string;
+    location: string;
+    email: string;
+    hireable?: boolean;
+    bio?: string;
+    twitter_username: string;
+    public_repos: number;
+    public_gists: number;
+    followers: number;
+    following: number;
+    created_at: string;
+    updated_at: string;
+    private_gists?: number;
+    total_private_repos?: number;
+    owned_private_repos?: number;
+    disk_usage?: number;
+    collaborators?: number;
+    two_factor_authentication?: boolean;
+    plan?: Plan
+
+
+}
+
+// const justine: User = {
+//     name: 'Justine',
+//     age: 23,
+// };
 
 // const isJustineAnAdult: boolean = isAdult(justine);
 // console.log(isJustineAnAdult)
 
-export default User
+// export default {
+//     userFromJson
+// }
