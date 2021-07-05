@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import * as User from '../user'
+import * as User from '../src/user'
 
 describe('User from JSON function', () => {
     it('should return a instance of User', () => {

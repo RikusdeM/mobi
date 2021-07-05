@@ -1,5 +1,5 @@
 import {User} from './user'
-import config from "./config";
+import config from "../config";
 
 const express = require('express'),
     bodyParser = require('body-parser');

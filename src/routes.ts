@@ -1,5 +1,5 @@
 import {User, userFromJson, gitHubUserInfoFromJson, GithubUserInfo} from "./user";
-import config from "./config";
+import config from "../config";
 import app from "./webserver";
 const axios = require('axios')
 

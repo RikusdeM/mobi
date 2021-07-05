@@ -9,4 +9,4 @@ RUN tsc *.ts
 
 EXPOSE 8080
 
-CMD ["node", "routes.js"]
+CMD ["node", "src/routes.js"]

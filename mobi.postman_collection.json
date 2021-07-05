@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "109c0a60-1f1e-4a31-8724-72d9e8289dce",
+		"name": "mobi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.github.com/users/RikusdeM",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.v3+json"
+					}
+				],
+				"url": {
+					"raw": "https://api.github.com/users/RikusdeM",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"users",
+						"RikusdeM"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserInfo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"RikusdeM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/github",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"github"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/github/ian",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"github",
+						"ian"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
