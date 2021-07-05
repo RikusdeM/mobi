@@ -5,8 +5,8 @@ WORKDIR /app
 COPY . .
 
 RUN npm install -g typescript
-RUN tsc webserver.ts
+RUN tsc *.ts
 
 EXPOSE 8080
 
-CMD ["node", "webserver.js"]
+CMD ["node", "routes.js"]
