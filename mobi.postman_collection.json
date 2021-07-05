@@ -64,14 +64,20 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/github/ian",
+					"raw": "localhost:8080/github/:username",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"github",
-						"ian"
+						":username"
+					],
+					"variable": [
+						{
+							"key": "username",
+							"value": "RikusdeM"
+						}
 					]
 				}
 			},

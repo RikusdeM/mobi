@@ -1,8 +1,8 @@
 import { expect } from 'chai';
-import * as User from '../src/user'
-import {getUserInfo} from "../src/routes";
-import {GithubUserInfo} from "../src/user";
-import {shutDown} from "../src/webserver";
+import * as User from '../user'
+import {getUserInfo} from "../routes";
+import {GithubUserInfo} from "../user";
+import {shutDown} from "../webserver";
 
 describe('User from JSON function', () => {
     it('should return a instance of User', () => {
