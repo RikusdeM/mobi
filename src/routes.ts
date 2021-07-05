@@ -1,6 +1,6 @@
 import {User, userFromJson, gitHubUserInfoFromJson, GithubUserInfo} from "./user";
 import config from "../config";
-import app from "./webserver";
+import {app} from "./webserver";
 const axios = require('axios')
 
 
@@ -54,7 +54,7 @@ app.post('/github', (req, res) => {
     }
 })
 
-function getUserInfo(username:string): Promise<GithubUserInfo> {
+export function getUserInfo(username:string): Promise<GithubUserInfo> {
     const request =
         axios
         .get('https://api.github.com/users/' + username, {
