@@ -11,12 +11,12 @@ $ npm test
 ```
 
 ## Config
-```javascript
+```shell
 config.ts
 ```
 Contains config for http server port and github token
 
 ## Postman collection
-```javascript
+```shell
 mobi.postman_collection.json
 ```
