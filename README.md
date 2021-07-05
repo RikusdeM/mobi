@@ -15,3 +15,8 @@ $ npm test
 config.ts
 ```
 Contains config for http server port and github token
+
+## Postman collection
+```javascript
+mobi.postman_collection.json
+```
