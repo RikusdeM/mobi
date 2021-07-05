@@ -16,12 +16,27 @@ describe('GithubUserInfo from GET', () => {
     it('should return a instance of GithubUserInfo', () => {
         let userInfo:Promise<GithubUserInfo> = getUserInfo("RikusdeM")
         userInfo.then(usr => {
-        expect(usr.login).to.equal("RikusdeM");
-        expect(usr.name).to.equal("Rikus de Milander");
-        expect(usr.avatar_url).to.equal("https://avatars.githubusercontent.com/u/23331552?v=4");
+        expect(usr.login).to.be.a('string');
+        expect(usr.avatar_url).to.be.a('string');
+        expect(usr.followers_url).to.be.a('string');
+        expect(usr.following_url).to.be.a('string');
+        expect(usr.repos_url).to.be.a('string');
+        expect(usr.events_url).to.be.a('string');
+        expect(usr.type).to.be.a('string');
+        expect(usr.name).to.be.a('string');
+        expect(usr.company).to.be.a('string');
+        expect(usr.blog).to.be.a('string');
+        expect(usr.location).to.be.a('string');
+        expect(usr.email).to.be.a('string');
+        expect(usr.twitter_username).to.be.a('string');
+        expect(usr.public_repos).to.be.a('number');
+        expect(usr.public_gists).to.be.a('number');
         expect(usr.followers).greaterThanOrEqual(0);
-        shutDown()
+        expect(usr.following).to.be.a('number');
+        expect(usr.created_at).to.be.a('string');
+        expect(usr.updated_at).to.be.a('string');
         })
+        .finally(() => shutDown())
     });
 });
 

@@ -21,6 +21,7 @@ const shutdownManager = new GracefulShutdownManager(server);
 
 export function shutDown() {
     console.log('Received kill signal, shutting down gracefully');
+    process.exit(0)
     shutdownManager.terminate(() => {
         console.log('Server is gracefully terminated');
     });
