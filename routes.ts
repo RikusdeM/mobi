@@ -1,8 +1,7 @@
 import {User, userFromJson, gitHubUserInfoFromJson, GithubUserInfo} from "./user";
 import config from "./config";
 import {app} from "./webserver";
-const axios = require('axios')
-
+import axios from "axios";
 
 app.get('/github/:username', (req, res) => {
     res.setHeader('Content-Type', 'application/json')
