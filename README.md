@@ -5,6 +5,11 @@
 $ ./app.sh
 ```
 
+##Build
+```shell
+$ npm install
+```
+
 ## Testing
 ```shell
 $ npm test

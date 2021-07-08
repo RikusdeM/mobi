@@ -64,19 +64,24 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/github/:username",
+					"raw": "localhost:8080/github/:language/:page",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"github",
-						":username"
+						":language",
+						":page"
 					],
 					"variable": [
 						{
-							"key": "username",
-							"value": "RikusdeM"
+							"key": "language",
+							"value": "python"
+						},
+						{
+							"key": "page",
+							"value": "1"
 						}
 					]
 				}
