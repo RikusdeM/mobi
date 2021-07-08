@@ -1,11 +1,9 @@
-import {User} from './user'
 import config from "./config";
 
 const express = require('express'),
     bodyParser = require('body-parser');
 
 const GracefulShutdownManager = require('http-graceful-shutdown')
-
 
 export const app = express();
 
