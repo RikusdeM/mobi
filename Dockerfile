@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install -g typescript
+RUN npm install -g typescript@4.3.5
 RUN tsc *.ts
 
 EXPOSE 8080
