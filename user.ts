@@ -1,28 +1,26 @@
-
 export class User {
     name: string;
 
-    constructor(name:string) {
+    constructor(name: string) {
         this.name = name
     }
 }
 
-export function userFromJson(jsonStr:string):User {
+export function userFromJson(jsonStr: string): User {
     try {
         let usr = JSON.parse(jsonStr)
         console.log("Created new User : " + usr.name)
         return new User(usr.name)
-    }
-    catch (e) {
+    } catch (e) {
         console.log("COULD NOT CREATE USER FROM INPUT")
     }
 }
 
 class Plan {
-        name: string;
-        space: number;
-        private_repos: number;
-        collaborators: number;
+    name: string;
+    space: number;
+    private_repos: number;
+    collaborators: number;
 
     constructor(name: string,
                 space: number,
@@ -118,24 +116,24 @@ export class GithubUserInfo {
                 plan?: Plan) {
 
         this.login = login;
-            this.avatar_url = avatar_url;
-            this.followers_url = followers_url;
-            this.following_url = following_url;
-            this.repos_url = repos_url;
-            this.events_url = events_url;
-            this.type = type;
-            this.name = name;
-            this.company = company;
-            this.blog = blog;
-            this.location = location;
-            this.email = email;
-            this.twitter_username = twitter_username;
-            this.public_repos = public_repos;
-            this.public_gists = public_gists;
-            this.followers = followers;
-            this.following = following;
-            this.created_at = created_at;
-            this.updated_at = updated_at;
+        this.avatar_url = avatar_url;
+        this.followers_url = followers_url;
+        this.following_url = following_url;
+        this.repos_url = repos_url;
+        this.events_url = events_url;
+        this.type = type;
+        this.name = name;
+        this.company = company;
+        this.blog = blog;
+        this.location = location;
+        this.email = email;
+        this.twitter_username = twitter_username;
+        this.public_repos = public_repos;
+        this.public_gists = public_gists;
+        this.followers = followers;
+        this.following = following;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
 
         if (typeof id !== 'undefined') {
             this.id = id
@@ -222,10 +220,10 @@ export class GithubUserInfo {
 
 }
 
-export function gitHubUserInfoFromJson(userInfo:string): GithubUserInfo{
+export function gitHubUserInfoFromJson(userInfo: string): GithubUserInfo {
     let usr = JSON.parse(userInfo)
     try {
-        if(typeof usr.login &&
+        if (typeof usr.login &&
             typeof usr.avatar_url &&
             typeof usr.followers_url &&
             typeof usr.following_url &&
@@ -243,7 +241,7 @@ export function gitHubUserInfoFromJson(userInfo:string): GithubUserInfo{
             typeof usr.followers &&
             typeof usr.following &&
             typeof usr.created_at &&
-            typeof usr.updated_at !== 'undefined'){
+            typeof usr.updated_at !== 'undefined') {
             return new GithubUserInfo(usr.login,
                 usr.avatar_url,
                 usr.followers_url,
@@ -284,8 +282,7 @@ export function gitHubUserInfoFromJson(userInfo:string): GithubUserInfo{
                 usr.two_factor_authentication,
                 usr.plan)
         }
-    }
-    catch (e) {
+    } catch (e) {
         console.log("COULD NOT CREATE GITHUBUSERINFO")
     }
 }

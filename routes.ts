@@ -5,8 +5,8 @@ import axios from "axios";
 
 app.get('/github/:language/:page', async (req, res) => {
     res.setHeader('Content-Type', 'application/json')
-    let language:string = req.params.language
-    let page:number = req.params.page
+    let language: string = req.params.language
+    let page: number = req.params.page
     if (language !== 'undefined') {
         let usersData: Promise<Array<Promise<GithubUserInfo>>> = getUsersByLanguage(language, page)
         let userDataAr: Array<Promise<GithubUserInfo>> = await usersData
